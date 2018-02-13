@@ -1,0 +1,22 @@
+PODS:
+  - EasyPeasy (1.5.1)
+  - GCDWebServer (3.4.2):
+    - GCDWebServer/Core (= 3.4.2)
+  - GCDWebServer/Core (3.4.2)
+  - SBTUITestTunnel/Client (2.3.0)
+  - SBTUITestTunnel/Server (2.3.0):
+    - GCDWebServer (~> 3.0)
+
+DEPENDENCIES:
+  - EasyPeasy (= 1.5.1)
+  - SBTUITestTunnel/Client
+  - SBTUITestTunnel/Server
+
+SPEC CHECKSUMS:
+  EasyPeasy: 3bf792794f82b65290bcb70bccee1a68852f7517
+  GCDWebServer: 8d67ee9f634b4bb91eb4b8aee440318a5fc6debd
+  SBTUITestTunnel: 90f09ca722124754dda274f4128572c502f6d013
+
+PODFILE CHECKSUM: 8bec08ff329045e7aa9dd53af1d3986ace9b90df
+
+COCOAPODS: 1.4.0
