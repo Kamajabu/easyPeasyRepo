@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import EasyPeasy
 
-class SearchScreenViewImplementation: UIViewController, SearchScreenView, UITextFieldDelegate {
+class SearchScreenViewImplementation: UIViewController, SearchScreenView {   
     var configurator = SearchScreenConfiguratorImplementation()
     var presenter: SearchScreenPresenter!
     
@@ -73,7 +73,6 @@ class SearchScreenViewImplementation: UIViewController, SearchScreenView, UIText
         
         stylizeTextField(searchReposTextfield)
         searchReposTextfield.placeholder = SearchScreenViewParameters.searchTextFieldPlaceholder
-        searchReposTextfield.delegate = self
     }
     
     func positionUserLoginTextfield() {
@@ -123,6 +122,12 @@ class SearchScreenViewImplementation: UIViewController, SearchScreenView, UIText
     @objc func searchButtonAction(sender: UIButton!) {
         print("Button tapped + \(self.searchReposTextfield.text)")
         presenter.downloadData(inputText: self.searchReposTextfield.text)
+    }
+    
+    func presentResultsScreen(destinationViewController: UIViewController) {
+        DispatchQueue.main.async(execute: {
+            self.present(destinationViewController, animated: true, completion: nil)
+        })
     }
     
 }

@@ -12,10 +12,6 @@ import Foundation
 struct SearchScreenConsts {
     static let masterEndpoint = "https://api.github.com/search"
     static let repositoryQuery = "/repositories?q="
-    static let cellHeight: Float = 40
-    
-    static let detailSegue = "showDetail"
-    static let cellIdentifier = "masterCell"
 }
 
 protocol SearchScreenConfigurator {

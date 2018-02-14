@@ -52,11 +52,14 @@ class SearchScreenPresenterImplementation: SearchScreenPresenter {
         self.deserializer
             .decodeData(data: recievedData, dataType: SearchData.self,
                         Completion: { (data) in
-                            self.goToDetailsScreen(fetchedData: data)
+                            self.goToResultsScreen(fetchedData: data)
             })
     }
     
-    internal func goToDetailsScreen(fetchedData: SearchData) {
+    internal func goToResultsScreen(fetchedData: SearchData) {
+        let resultsScreenViewController = ResultsScreenViewImplementation()
         
+        resultsScreenViewController.configurator = ResultsScreenConfiguratorImplementation(searchData: fetchedData)
+        self.view.presentResultsScreen(destinationViewController: resultsScreenViewController)
     }
 }

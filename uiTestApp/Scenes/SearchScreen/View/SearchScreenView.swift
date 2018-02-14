@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import UIKit
 
 protocol SearchScreenView: class {
-    
+    func presentResultsScreen(destinationViewController: UIViewController)
 }

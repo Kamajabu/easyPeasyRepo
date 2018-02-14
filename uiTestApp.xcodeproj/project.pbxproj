@@ -26,6 +26,11 @@
 		E450D1F4203440B30006C9F2 /* RepoOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450D1F3203440B30006C9F2 /* RepoOwner.swift */; };
 		E450D1F9203441220006C9F2 /* ApiGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450D1F8203441220006C9F2 /* ApiGateway.swift */; };
 		E450D1FB203441C70006C9F2 /* Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450D1FA203441C70006C9F2 /* Deserializer.swift */; };
+		E450D200203451D00006C9F2 /* ResultsScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450D1FF203451D00006C9F2 /* ResultsScreenPresenter.swift */; };
+		E450D202203451E70006C9F2 /* ResultsScreenPresenterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450D201203451E70006C9F2 /* ResultsScreenPresenterImplementation.swift */; };
+		E450D2042034522A0006C9F2 /* ResultsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450D2032034522A0006C9F2 /* ResultsScreenView.swift */; };
+		E450D2062034523F0006C9F2 /* ResultsScreenViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450D2052034523F0006C9F2 /* ResultsScreenViewImplementation.swift */; };
+		E450D208203452A30006C9F2 /* ResultsScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450D207203452A30006C9F2 /* ResultsScreenConfigurator.swift */; };
 		EAB98DF2FB7C080B88A308DE /* Pods_uiTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E926182B9BF24D06723D0959 /* Pods_uiTestApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +81,11 @@
 		E450D1F3203440B30006C9F2 /* RepoOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoOwner.swift; sourceTree = "<group>"; };
 		E450D1F8203441220006C9F2 /* ApiGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiGateway.swift; sourceTree = "<group>"; };
 		E450D1FA203441C70006C9F2 /* Deserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deserializer.swift; sourceTree = "<group>"; };
+		E450D1FF203451D00006C9F2 /* ResultsScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsScreenPresenter.swift; sourceTree = "<group>"; };
+		E450D201203451E70006C9F2 /* ResultsScreenPresenterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsScreenPresenterImplementation.swift; sourceTree = "<group>"; };
+		E450D2032034522A0006C9F2 /* ResultsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsScreenView.swift; sourceTree = "<group>"; };
+		E450D2052034523F0006C9F2 /* ResultsScreenViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsScreenViewImplementation.swift; sourceTree = "<group>"; };
+		E450D207203452A30006C9F2 /* ResultsScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsScreenConfigurator.swift; sourceTree = "<group>"; };
 		E926182B9BF24D06723D0959 /* Pods_uiTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uiTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE2A07A5A96821E778D7389 /* Pods-uiTestAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uiTestAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-uiTestAppUITests/Pods-uiTestAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FFFB206484B94502CEEB17F9 /* Pods-uiTestAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uiTestAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uiTestAppTests/Pods-uiTestAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -238,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				E450D1DF20342C360006C9F2 /* SearchScreen */,
+				E450D1FC203451180006C9F2 /* ResultsScreen */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -249,6 +260,34 @@
 				E450D1FA203441C70006C9F2 /* Deserializer.swift */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		E450D1FC203451180006C9F2 /* ResultsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E450D1FD203451A00006C9F2 /* Presenter */,
+				E450D1FE203451AC0006C9F2 /* View */,
+				E450D207203452A30006C9F2 /* ResultsScreenConfigurator.swift */,
+			);
+			path = ResultsScreen;
+			sourceTree = "<group>";
+		};
+		E450D1FD203451A00006C9F2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E450D1FF203451D00006C9F2 /* ResultsScreenPresenter.swift */,
+				E450D201203451E70006C9F2 /* ResultsScreenPresenterImplementation.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E450D1FE203451AC0006C9F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E450D2032034522A0006C9F2 /* ResultsScreenView.swift */,
+				E450D2052034523F0006C9F2 /* ResultsScreenViewImplementation.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -550,11 +589,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E450D2062034523F0006C9F2 /* ResultsScreenViewImplementation.swift in Sources */,
 				E450D1E920342CC10006C9F2 /* SearchScreenViewImplementation.swift in Sources */,
 				E44C3D5820331054003A5E0B /* uiTestApp.xcdatamodeld in Sources */,
 				E450D1F2203440A80006C9F2 /* RepoItem.swift in Sources */,
 				E450D1ED20343F620006C9F2 /* SearchScreenConfigurator.swift in Sources */,
 				E450D1E220342C7B0006C9F2 /* SearchScreenPresenter.swift in Sources */,
+				E450D202203451E70006C9F2 /* ResultsScreenPresenterImplementation.swift in Sources */,
+				E450D200203451D00006C9F2 /* ResultsScreenPresenter.swift in Sources */,
 				E44C3D5020331054003A5E0B /* AppDelegate.swift in Sources */,
 				E450D1EB203432CD0006C9F2 /* SearchScreenViewParameters.swift in Sources */,
 				E450D1F9203441220006C9F2 /* ApiGateway.swift in Sources */,
@@ -563,6 +605,8 @@
 				E450D1F4203440B30006C9F2 /* RepoOwner.swift in Sources */,
 				E450D1F0203440880006C9F2 /* SearchData.swift in Sources */,
 				E450D1E420342C890006C9F2 /* SearchScreenPresenterImplementation.swift in Sources */,
+				E450D2042034522A0006C9F2 /* ResultsScreenView.swift in Sources */,
+				E450D208203452A30006C9F2 /* ResultsScreenConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
