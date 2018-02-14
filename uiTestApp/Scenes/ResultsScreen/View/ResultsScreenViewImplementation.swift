@@ -13,25 +13,42 @@ import EasyPeasy
 class ResultsScreenViewImplementation: UIViewController,UITableViewDelegate, UITableViewDataSource, ResultsScreenView {
     var configurator: ResultsScreenConfigurator!
     var presenter: ResultsScreenPresenter!
-    //CHANGE
-    var tableView: UITableView = UITableView()
     
+    fileprivate lazy var resultsTableView: UITableView = {
+        let tableView = UITableView(frame: CGRect.zero)
+        return tableView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configurator.configure(resultsScreenViewImplementation: self)
-        //Constructing tableView.
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.tableView.rowHeight = 50
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
-        self.view.addSubview(self.tableView)
-        
-        self.tableView.frame = CGRect(x:0,y:0, width:self.view.frame.width,height:self.view.frame.height);
-
+        self.setup()
     }
     
+    fileprivate func setup() {
+        self.view.backgroundColor = .white
+
+        setupResultsTableView()
+    }
+    
+    func setupResultsTableView() {
+        
+        self.view.addSubview(self.resultsTableView)
+
+        //Constructing tableView.
+        self.resultsTableView.delegate = self
+        self.resultsTableView.dataSource = self
+        
+        
+        self.resultsTableView.rowHeight = 50
+        self.resultsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        
+        self.resultsTableView.frame = CGRect(x:0,y:0, width:self.view.frame.width,height:self.view.frame.height);
+
+    }
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
