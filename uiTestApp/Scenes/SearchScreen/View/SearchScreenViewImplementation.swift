@@ -73,6 +73,7 @@ class SearchScreenViewImplementation: UIViewController, SearchScreenView {
         
         stylizeTextField(searchReposTextfield)
         searchReposTextfield.placeholder = SearchScreenViewParameters.searchTextFieldPlaceholder
+        searchReposTextfield.accessibilityIdentifier = "SearchReposTextfield"
     }
     
     func positionUserLoginTextfield() {

@@ -35,4 +35,17 @@ class ResultsScreenPresenterImplementation: ResultsScreenPresenter {
         let cellData = searchData.items[row]
         return cellData.full_name
     }
+    
+    func configureCell(cell: GithubRepoItemCell, row: Int) {
+        let cellData = searchData.items[row]
+
+        if(row == 0) {
+        cell.setBackgroundColor(.red)
+        } else {
+            cell.setBackgroundColor(.green)
+        }
+        
+        cell.setTitleLabel(content: cellData.name)
+    }
+
 }

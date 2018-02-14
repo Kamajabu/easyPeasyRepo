@@ -41,7 +41,7 @@ class ResultsScreenViewImplementation: UIViewController, ResultsScreenView {
         self.resultsTableView.dataSource = self
         
         self.resultsTableView.rowHeight = 50
-        self.resultsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.resultsTableView.register(GithubRepoItemCell.self, forCellReuseIdentifier: "cell")
         
         positionResultsTableView()
     }
@@ -61,10 +61,12 @@ extension ResultsScreenViewImplementation: UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as! GithubRepoItemCell
         
-        cell.textLabel?.text =  presenter.getNameForCell(row: indexPath.row)
-        cell.detailTextLabel?.text = presenter.getDetailTextForCell(row: indexPath.row)
+        presenter.configureCell(cell: cell, row: indexPath.row)
+        
+//        cell.textLabel?.text =  presenter.getNameForCell(row: indexPath.row)
+//        cell.detailTextLabel?.text = presenter.getDetailTextForCell(row: indexPath.row)
         return cell
     }
     

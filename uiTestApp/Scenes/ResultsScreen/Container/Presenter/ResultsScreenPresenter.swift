@@ -22,4 +22,6 @@ protocol ResultsScreenPresenter: class {
     func getNameForCell(row: Int) -> String
     
     func getDetailTextForCell(row: Int) -> String
+    
+    func configureCell(cell: GithubRepoItemCell, row: Int)
 }

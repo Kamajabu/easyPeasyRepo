@@ -10,11 +10,13 @@ import XCTest
 import SBTUITestTunnel
 
 class uiTestAppUITests: XCTestCase {
+    let elements = SearchScreenElements.instance
+    
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
         app.launchTunnel()
-
+        
         let requestMatch = SBTRequestMatch.init(url: SearchScreenConsts.masterEndpoint)
         let returnedResponse = SBTStubResponse.init(fileNamed: TestConstants.Mock.githubResponse,
                                                     returnCode: 200,
@@ -27,11 +29,19 @@ class uiTestAppUITests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+        app.stubRequestsRemoveAll()
+    }
+    
+    func testLayoutHasBeenCreated() {
+        XCTContext.runActivity(named: "Enters text for search") { _ in
+            XCTAssert(elements.searchInput.waitForExistence(timeout: 2))
+        }
     }
     
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
         
         let app = XCUIApplication()
         let enterTextHereTextField = app.textFields["Enter text here"]
@@ -44,5 +54,6 @@ class uiTestAppUITests: XCTestCase {
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["pytest"]/*[[".cells.staticTexts[\"pytest\"]",".staticTexts[\"pytest\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["junruchen.github.io"]/*[[".cells.staticTexts[\"junruchen.github.io\"]",".staticTexts[\"junruchen.github.io\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
     }
+
     
 }

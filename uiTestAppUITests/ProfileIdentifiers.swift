@@ -1,5 +1,5 @@
 //
-//  TestConstants.swift
+//  ProfileIdentifiers.swift
 //  uiTestAppUITests
 //
 //  Created by Kamil Buczel on 14/02/2018.
@@ -8,9 +8,8 @@
 
 import Foundation
 
-struct TestConstants {
-    struct Mock {
-        static let githubResponse = "githubResponse.json"
+struct ProfileIdentifiers {
+    struct SearchScreen {
+        static let searchField = "SearchReposTextfield"
     }
-    
 }
