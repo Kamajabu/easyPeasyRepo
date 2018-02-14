@@ -7,20 +7,21 @@
 //
 
 import XCTest
+import SBTUITestTunnel
 
 class uiTestAppUITests: XCTestCase {
-        
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
+        app.launchTunnel()
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        let requestMatch = SBTRequestMatch.init(url: SearchScreenConsts.masterEndpoint)
+        let returnedResponse = SBTStubResponse.init(fileNamed: TestConstants.Mock.githubResponse,
+                                                    returnCode: 200,
+                                                    responseTime: 2)
+        let _ = app.stubRequests(matching: requestMatch,
+                                response: returnedResponse)
+        
     }
     
     override func tearDown() {
@@ -31,6 +32,17 @@ class uiTestAppUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let app = XCUIApplication()
+        let enterTextHereTextField = app.textFields["Enter text here"]
+        enterTextHereTextField.tap()
+        enterTextHereTextField.typeText("test")
+        app.buttons["Search"].tap()
+        
+        let tablesQuery = app.tables
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["gremlins.js"]/*[[".cells.staticTexts[\"gremlins.js\"]",".staticTexts[\"gremlins.js\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["pytest"]/*[[".cells.staticTexts[\"pytest\"]",".staticTexts[\"pytest\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["junruchen.github.io"]/*[[".cells.staticTexts[\"junruchen.github.io\"]",".staticTexts[\"junruchen.github.io\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
     }
     
 }

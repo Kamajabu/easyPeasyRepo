@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		71AF335114EDC3DB753845DF /* Pods_uiTestAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A6BAA5E039501F18DF95DC /* Pods_uiTestAppUITests.framework */; };
 		9177CE5C1F0076C9BEDACA38 /* Pods_uiTestAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD942BF5032FA058A806426F /* Pods_uiTestAppTests.framework */; };
+		E419E17D203465C1004ECC5E /* SearchScreenConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419E17C203465C1004ECC5E /* SearchScreenConsts.swift */; };
+		E419E17E203465C9004ECC5E /* SearchScreenConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419E17C203465C1004ECC5E /* SearchScreenConsts.swift */; };
+		E419E18020346ABF004ECC5E /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419E17F20346ABF004ECC5E /* TestConstants.swift */; };
 		E44C3D5020331054003A5E0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44C3D4F20331054003A5E0B /* AppDelegate.swift */; };
 		E44C3D5820331054003A5E0B /* uiTestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E44C3D5620331054003A5E0B /* uiTestApp.xcdatamodeld */; };
 		E44C3D5A20331054003A5E0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E44C3D5920331054003A5E0B /* Assets.xcassets */; };
 		E44C3D5D20331054003A5E0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E44C3D5B20331054003A5E0B /* LaunchScreen.storyboard */; };
 		E44C3D6820331054003A5E0B /* uiTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44C3D6720331054003A5E0B /* uiTestAppTests.swift */; };
 		E44C3D7320331054003A5E0B /* uiTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44C3D7220331054003A5E0B /* uiTestAppUITests.swift */; };
+		E44D73CB20346CE600630005 /* githubResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E419E18120346B06004ECC5E /* githubResponse.json */; };
 		E450D1E220342C7B0006C9F2 /* SearchScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450D1E120342C7B0006C9F2 /* SearchScreenPresenter.swift */; };
 		E450D1E420342C890006C9F2 /* SearchScreenPresenterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450D1E320342C890006C9F2 /* SearchScreenPresenterImplementation.swift */; };
 		E450D1E720342CA00006C9F2 /* SearchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450D1E620342CA00006C9F2 /* SearchScreenView.swift */; };
@@ -58,6 +62,9 @@
 		C6A6BAA5E039501F18DF95DC /* Pods_uiTestAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uiTestAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5127AB452A055D50B972397 /* Pods-uiTestAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uiTestAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uiTestAppUITests/Pods-uiTestAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD942BF5032FA058A806426F /* Pods_uiTestAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uiTestAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E419E17C203465C1004ECC5E /* SearchScreenConsts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenConsts.swift; sourceTree = "<group>"; };
+		E419E17F20346ABF004ECC5E /* TestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstants.swift; sourceTree = "<group>"; };
+		E419E18120346B06004ECC5E /* githubResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = githubResponse.json; sourceTree = "<group>"; };
 		E44C3D4C20331054003A5E0B /* uiTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uiTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44C3D4F20331054003A5E0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E44C3D5720331054003A5E0B /* uiTestApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = uiTestApp.xcdatamodel; sourceTree = "<group>"; };
@@ -192,6 +199,8 @@
 			children = (
 				E44C3D7220331054003A5E0B /* uiTestAppUITests.swift */,
 				E44C3D7420331054003A5E0B /* Info.plist */,
+				E419E17F20346ABF004ECC5E /* TestConstants.swift */,
+				E419E18120346B06004ECC5E /* githubResponse.json */,
 			);
 			path = uiTestAppUITests;
 			sourceTree = "<group>";
@@ -211,6 +220,7 @@
 			children = (
 				E450D1E120342C7B0006C9F2 /* SearchScreenPresenter.swift */,
 				E450D1E320342C890006C9F2 /* SearchScreenPresenterImplementation.swift */,
+				E419E17C203465C1004ECC5E /* SearchScreenConsts.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -422,6 +432,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E44D73CB20346CE600630005 /* githubResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,9 +548,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-uiTestAppUITests/Pods-uiTestAppUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SBTUITestTunnel-Client/SBTUITestTunnel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SBTUITestTunnel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -603,6 +617,7 @@
 				E450D1FB203441C70006C9F2 /* Deserializer.swift in Sources */,
 				E450D1E720342CA00006C9F2 /* SearchScreenView.swift in Sources */,
 				E450D1F4203440B30006C9F2 /* RepoOwner.swift in Sources */,
+				E419E17D203465C1004ECC5E /* SearchScreenConsts.swift in Sources */,
 				E450D1F0203440880006C9F2 /* SearchData.swift in Sources */,
 				E450D1E420342C890006C9F2 /* SearchScreenPresenterImplementation.swift in Sources */,
 				E450D2042034522A0006C9F2 /* ResultsScreenView.swift in Sources */,
@@ -623,6 +638,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E44C3D7320331054003A5E0B /* uiTestAppUITests.swift in Sources */,
+				E419E18020346ABF004ECC5E /* TestConstants.swift in Sources */,
+				E419E17E203465C9004ECC5E /* SearchScreenConsts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

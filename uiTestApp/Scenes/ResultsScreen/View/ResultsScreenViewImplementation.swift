@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import EasyPeasy
 
-class ResultsScreenViewImplementation: UIViewController,UITableViewDelegate, UITableViewDataSource, ResultsScreenView {
+class ResultsScreenViewImplementation: UIViewController, ResultsScreenView {
     var configurator: ResultsScreenConfigurator!
     var presenter: ResultsScreenPresenter!
     
@@ -32,23 +32,30 @@ class ResultsScreenViewImplementation: UIViewController,UITableViewDelegate, UIT
         setupResultsTableView()
     }
     
+    //MARK: ResultsTableView
     func setupResultsTableView() {
-        
         self.view.addSubview(self.resultsTableView)
 
         //Constructing tableView.
         self.resultsTableView.delegate = self
         self.resultsTableView.dataSource = self
         
-        
         self.resultsTableView.rowHeight = 50
         self.resultsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
-        
-        self.resultsTableView.frame = CGRect(x:0,y:0, width:self.view.frame.width,height:self.view.frame.height);
-
+        positionResultsTableView()
     }
+    
+    func positionResultsTableView() {
+        self.resultsTableView <- [
+            Width().like(self.view),
+            Height().like(self.view)
+        ]
+    }
+}
 
+extension ResultsScreenViewImplementation: UITableViewDelegate, UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -57,11 +64,13 @@ class ResultsScreenViewImplementation: UIViewController,UITableViewDelegate, UIT
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath)
         
         cell.textLabel?.text =  presenter.getNameForCell(row: indexPath.row)
+        cell.detailTextLabel?.text = presenter.getDetailTextForCell(row: indexPath.row)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.dataCount
     }
+
 }
 

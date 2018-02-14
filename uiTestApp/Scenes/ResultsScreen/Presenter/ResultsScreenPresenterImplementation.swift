@@ -29,8 +29,10 @@ class ResultsScreenPresenterImplementation: ResultsScreenPresenter {
     func getNameForCell(row: Int) -> String {
         let cellData = searchData.items[row]
                 return cellData.name
-
     }
     
-    
+    func getDetailTextForCell(row: Int) -> String {
+        let cellData = searchData.items[row]
+        return cellData.full_name
+    }
 }

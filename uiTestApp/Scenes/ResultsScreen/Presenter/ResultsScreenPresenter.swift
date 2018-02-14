@@ -20,4 +20,6 @@ protocol ResultsScreenPresenter: class {
     func viewDidLoad()
     
     func getNameForCell(row: Int) -> String
+    
+    func getDetailTextForCell(row: Int) -> String
 }

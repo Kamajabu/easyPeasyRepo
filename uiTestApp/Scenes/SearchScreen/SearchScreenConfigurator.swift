@@ -9,11 +9,6 @@
 
 import Foundation
 
-struct SearchScreenConsts {
-    static let masterEndpoint = "https://api.github.com/search"
-    static let repositoryQuery = "/repositories?q="
-}
-
 protocol SearchScreenConfigurator {
     func configure(searchScreenViewImplementation: SearchScreenViewImplementation)
 }
