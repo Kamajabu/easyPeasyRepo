@@ -15,4 +15,6 @@ protocol SearchScreenPresenter: class {
           deserializer: Deserializer)
     
     func viewDidLoad()
+    
+    func downloadData(inputText: String?) 
 }

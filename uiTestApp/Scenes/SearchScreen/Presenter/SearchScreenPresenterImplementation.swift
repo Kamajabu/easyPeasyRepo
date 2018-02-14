@@ -25,11 +25,20 @@ class SearchScreenPresenterImplementation: SearchScreenPresenter {
         
     }
     
-    internal func downloadData() {
-        apiGateway.fetchResources(urlString: SearchScreenConsts.masterEndpoint) { (data, error) in
+    func downloadData(inputText: String?) {
+        //Could be replaced by alamofire and parameters. Approach used here results in possible errors (white spaces etc.) but for now it's good enough
+        if let searchText = inputText {
+            let interpolatedUrl = SearchScreenConsts.masterEndpoint + SearchScreenConsts.repositoryQuery + searchText
+            print(interpolatedUrl)
+            fetchDataWithUrl(interpolatedUrl)
+        }
+    }
+    
+    func fetchDataWithUrl(_ passedUrlString: String) {
+        apiGateway.fetchResources(urlString: passedUrlString) { (data, error) in
             guard error == nil else {
                 let description = error?.localizedDescription
-//                self.view.displayErrorMessage(details: description ?? "-")
+                //                self.view.displayErrorMessage(details: description ?? "-")
                 return
             }
             
@@ -44,7 +53,6 @@ class SearchScreenPresenterImplementation: SearchScreenPresenter {
             .decodeData(data: recievedData, dataType: SearchData.self,
                         Completion: { (data) in
                             self.goToDetailsScreen(fetchedData: data)
-
             })
     }
     

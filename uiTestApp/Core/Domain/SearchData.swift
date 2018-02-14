@@ -9,5 +9,6 @@
 import Foundation
 
 struct SearchData: Codable {
-    
+    let total_count: Int
+    let incomplete_results: Bool
 }
