@@ -19,12 +19,13 @@ struct ResultsScreenElements: TunneledApplicationAware {
     func getCellForIndexOfTable(table: XCUIElement, index: Int, color: UIColor? = nil) -> XCUIElement {
         let identifierWithIndex = "\(ProfileIdentifiers.ResultsScreen.resultsCell)\(index)"
 
-        if (color != nil ) {
+        if (color == nil ) {
             return table.cells.element(matching: .cell, identifier: identifierWithIndex)
         } else {
-            let colorDescription = color?.debugDescription
+            let colorDescription = color!.debugDescription
             let identifierWithColor = "\(ProfileIdentifiers.ResultsScreen.resultsCell)\(index)_\(colorDescription)"
-
+            
+            print("tests \(identifierWithColor)")
             return table.cells.element(matching: .cell, identifier: identifierWithColor)
         }
     }

@@ -39,6 +39,8 @@
 		E450D2042034522A0006C9F2 /* ResultsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450D2032034522A0006C9F2 /* ResultsScreenView.swift */; };
 		E450D2062034523F0006C9F2 /* ResultsScreenViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450D2052034523F0006C9F2 /* ResultsScreenViewImplementation.swift */; };
 		E450D208203452A30006C9F2 /* ResultsScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450D207203452A30006C9F2 /* ResultsScreenConfigurator.swift */; };
+		E4ADBACB20359F67001AE907 /* ResultsScreenElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADBAC920359F66001AE907 /* ResultsScreenElements.swift */; };
+		E4ADBACC20359F67001AE907 /* ResultsScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADBACA20359F66001AE907 /* ResultsScreenUITests.swift */; };
 		EAB98DF2FB7C080B88A308DE /* Pods_uiTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E926182B9BF24D06723D0959 /* Pods_uiTestApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +103,8 @@
 		E450D2032034522A0006C9F2 /* ResultsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsScreenView.swift; sourceTree = "<group>"; };
 		E450D2052034523F0006C9F2 /* ResultsScreenViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsScreenViewImplementation.swift; sourceTree = "<group>"; };
 		E450D207203452A30006C9F2 /* ResultsScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsScreenConfigurator.swift; sourceTree = "<group>"; };
+		E4ADBAC920359F66001AE907 /* ResultsScreenElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsScreenElements.swift; sourceTree = "<group>"; };
+		E4ADBACA20359F66001AE907 /* ResultsScreenUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsScreenUITests.swift; sourceTree = "<group>"; };
 		E926182B9BF24D06723D0959 /* Pods_uiTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uiTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE2A07A5A96821E778D7389 /* Pods-uiTestAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uiTestAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-uiTestAppUITests/Pods-uiTestAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FFFB206484B94502CEEB17F9 /* Pods-uiTestAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uiTestAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uiTestAppTests/Pods-uiTestAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 		E44C3D7120331054003A5E0B /* uiTestAppUITests */ = {
 			isa = PBXGroup;
 			children = (
+				E4ADBAC920359F66001AE907 /* ResultsScreenElements.swift */,
+				E4ADBACA20359F66001AE907 /* ResultsScreenUITests.swift */,
 				E44C3D7220331054003A5E0B /* uiTestAppUITests.swift */,
 				E44C3D7420331054003A5E0B /* Info.plist */,
 				E419E17F20346ABF004ECC5E /* TestConstants.swift */,
@@ -666,11 +672,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4ADBACC20359F67001AE907 /* ResultsScreenUITests.swift in Sources */,
 				E44D73CD2034764D00630005 /* SearchScreenElements.swift in Sources */,
 				E44C3D7320331054003A5E0B /* uiTestAppUITests.swift in Sources */,
 				E44D73D12034801200630005 /* ProfileIdentifiers.swift in Sources */,
 				E44D73CF20347E2300630005 /* TunneledApplicationAware.swift in Sources */,
 				E419E18020346ABF004ECC5E /* TestConstants.swift in Sources */,
+				E4ADBACB20359F67001AE907 /* ResultsScreenElements.swift in Sources */,
 				E419E17E203465C9004ECC5E /* SearchScreenConsts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

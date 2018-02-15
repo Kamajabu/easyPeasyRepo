@@ -27,7 +27,7 @@ class GithubRepoItemCell: UITableViewCell {
         self.setup()
     }
     
-    var defaultIdentifier: String!
+    var defaultIdentifier: String?
     
     func setup() {
         setupTitleLabel()
@@ -90,12 +90,12 @@ class GithubRepoItemCell: UITableViewCell {
     
     func setIdentifier(row: Int) {
         self.accessibilityIdentifier = "resultsCell_\(row)"
-        self.defaultIdentifier = self.accessibilityIdentifier!
+        self.defaultIdentifier = self.accessibilityIdentifier
     }
     
     func decorateWithColor(color: UIColor) {
         //Color could be changed to enum
-        self.accessibilityIdentifier = "\(defaultIdentifier)_\(color.debugDescription)"
+        self.accessibilityIdentifier = "\(defaultIdentifier ?? "")_\(color.debugDescription)"
         print(self.accessibilityIdentifier ?? "")
     }
 }
