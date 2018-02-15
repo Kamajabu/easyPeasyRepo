@@ -6,8 +6,9 @@ target 'uiTestApp' do
   use_frameworks!
 
   # Pods for uiTestApp
-  pod 'SBTUITestTunnel/Server'
+  	pod 'SBTUITestTunnel/Server'
 	pod "EasyPeasy", '1.5.1'
+	pod 'RealmSwift'
 
   target 'uiTestAppTests' do
     inherit! :search_paths
