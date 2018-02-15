@@ -103,6 +103,7 @@ class SearchScreenViewImplementation: UIViewController, SearchScreenView {
         positionSearchButton()
         stylizeSearchButton()
         
+        searchButton.accessibilityIdentifier = "SearchButton"
         searchButton.addTarget(self, action: #selector(searchButtonAction), for: .touchUpInside)
     }
     
@@ -121,7 +122,7 @@ class SearchScreenViewImplementation: UIViewController, SearchScreenView {
     }
     
     @objc func searchButtonAction(sender: UIButton!) {
-        print("Button tapped + \(self.searchReposTextfield.text)")
+//        print("Button tapped + \(self.searchReposTextfield.text)")
         presenter.downloadData(inputText: self.searchReposTextfield.text)
     }
     

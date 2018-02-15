@@ -40,8 +40,9 @@ class ResultsScreenViewImplementation: UIViewController, ResultsScreenView {
         self.resultsTableView.delegate = self
         self.resultsTableView.dataSource = self
         
-        self.resultsTableView.rowHeight = 50
+        self.resultsTableView.rowHeight = 80
         self.resultsTableView.register(GithubRepoItemCell.self, forCellReuseIdentifier: "cell")
+        self.resultsTableView.accessibilityIdentifier = "ResultsTable"
         
         positionResultsTableView()
     }
