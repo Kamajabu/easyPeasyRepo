@@ -11,5 +11,11 @@ import Foundation
 struct ProfileIdentifiers {
     struct SearchScreen {
         static let searchField = "SearchReposTextfield"
+        static let searchButton = "SearchButton"
+    }
+    
+    struct ResultsScreen {
+        static let resultsTable = "ResultsTable"
+        static let resultsCell = "resultsCell_"
     }
 }
