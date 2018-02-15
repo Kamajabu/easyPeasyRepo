@@ -50,24 +50,38 @@ class ResultsScreenUITests: XCTestCase {
     func testCellColors() {
         XCTContext.runActivity(named: "Table is visible") { _ in
             let parentTableView = resultsScreenElements.resultsTable
-//            case 0:
-//            cell.setBackgroundColor(.red)
-//            case 1:
-//            cell.setBackgroundColor(.yellow)
-//            case 2:
-//            cell.setBackgroundColor(.green)
-
+            
             let firstCellElementPainted = resultsScreenElements.getCellForIndexOfTable(table: parentTableView, index: 0, color: .red)
-            
             XCTAssert(firstCellElementPainted.waitForExistence(timeout: 2))
+            
+            let secondCellElementPainted = resultsScreenElements.getCellForIndexOfTable(table: parentTableView, index: 1, color: .yellow)
+            XCTAssert(secondCellElementPainted.waitForExistence(timeout: 2))
 
-//            firstCellElement.children(matching: XCUIElement.ElementType)
-            
-            
+            let thirdCellElementPainted = resultsScreenElements.getCellForIndexOfTable(table: parentTableView, index: 2, color: .green)
+            XCTAssert(thirdCellElementPainted.waitForExistence(timeout: 2))
         }
-        
     }
-
-
     
+    func testThatThereIsNoMoreCells() {
+        let parentTableView = resultsScreenElements.resultsTable
+
+        let sixthCell = resultsScreenElements.getCellForIndexOfTable(table: parentTableView, index: 6)
+        XCTAssertFalse(sixthCell.waitForExistence(timeout: 2))
+    }
+    
+    func testDisplayedCellsNumber() {
+        let parentTableView = resultsScreenElements.resultsTable
+        waitForElementToAppear(parentTableView)
+
+        let cells = resultsScreenElements.getAllCellsForTable(table: parentTableView)
+        XCTAssertTrue(cells.count == 5)
+    }
+    
+    func waitForElementToAppear(_ element: XCUIElement) {
+        let predicate = NSPredicate(format: "exists == true")
+        let expectation = XCTNSPredicateExpectation(predicate: predicate,
+                                                    object: element)
+        
+        XCTWaiter().wait(for: [expectation], timeout: 2)
+    }
 }

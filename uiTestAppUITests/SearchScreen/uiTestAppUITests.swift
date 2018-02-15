@@ -39,10 +39,6 @@ class uiTestAppUITests: XCTestCase {
     }
     
     func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
-        
         let app = XCUIApplication()
         let enterTextHereTextField = app.textFields["Enter text here"]
         enterTextHereTextField.tap()
@@ -54,6 +50,4 @@ class uiTestAppUITests: XCTestCase {
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["pytest"]/*[[".cells.staticTexts[\"pytest\"]",".staticTexts[\"pytest\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["junruchen.github.io"]/*[[".cells.staticTexts[\"junruchen.github.io\"]",".staticTexts[\"junruchen.github.io\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
     }
-
-    
 }

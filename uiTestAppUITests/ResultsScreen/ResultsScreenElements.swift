@@ -29,5 +29,9 @@ struct ResultsScreenElements: TunneledApplicationAware {
             return table.cells.element(matching: .cell, identifier: identifierWithColor)
         }
     }
+    
+    func getAllCellsForTable(table: XCUIElement) -> XCUIElementQuery {
+        return table.cells
+    }
 }
 

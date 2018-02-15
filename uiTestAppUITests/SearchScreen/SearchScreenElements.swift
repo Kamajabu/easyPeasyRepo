@@ -19,6 +19,4 @@ struct SearchScreenElements: TunneledApplicationAware {
     var searchButton: XCUIElement {
         return app.buttons[ProfileIdentifiers.SearchScreen.searchButton].firstMatch
     }
-    
-//    (self.app.textFields["Enter text here"].waitForExistence(timeout: 2))
 }

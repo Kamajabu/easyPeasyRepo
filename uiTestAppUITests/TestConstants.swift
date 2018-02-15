@@ -12,5 +12,4 @@ struct TestConstants {
     struct Mock {
         static let githubResponse = "githubResponse.json"
     }
-    
 }
