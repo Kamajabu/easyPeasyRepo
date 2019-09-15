@@ -33,7 +33,7 @@ class SearchScreenViewImplementation: UIViewController, SearchScreenView {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurator.configure(searchScreenViewImplementation: self)
-
+        
         self.setup()
     }
     
@@ -87,7 +87,7 @@ class SearchScreenViewImplementation: UIViewController, SearchScreenView {
     
     func stylizeTextField(_ textField: UITextField) {
         textField.font = UIFont.systemFont(ofSize: SearchScreenViewParameters.uiTextFieldFontSize)
-        textField.backgroundColor = .gray
+        textField.backgroundColor = .lightGray
         textField.borderStyle = UITextBorderStyle.roundedRect
         textField.autocorrectionType = UITextAutocorrectionType.no
         textField.keyboardType = UIKeyboardType.default
@@ -99,7 +99,7 @@ class SearchScreenViewImplementation: UIViewController, SearchScreenView {
     //MARK: SearchButton
     func setupSearchButton() {
         self.view.addSubview(self.searchButton)
-
+        
         positionSearchButton()
         stylizeSearchButton()
         
@@ -117,12 +117,11 @@ class SearchScreenViewImplementation: UIViewController, SearchScreenView {
     }
     
     func stylizeSearchButton() {
-        self.searchButton.backgroundColor = .green
+        self.searchButton.backgroundColor = .gray
         self.searchButton.setTitle(SearchScreenViewParameters.searchButtonTitle, for: .normal)
     }
     
     @objc func searchButtonAction(sender: UIButton!) {
-//        print("Button tapped + \(self.searchReposTextfield.text)")
         presenter.downloadData(inputText: self.searchReposTextfield.text)
     }
     

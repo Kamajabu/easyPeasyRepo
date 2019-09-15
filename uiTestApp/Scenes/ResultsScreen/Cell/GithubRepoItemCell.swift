@@ -71,7 +71,7 @@ class GithubRepoItemCell: UITableViewCell {
     
     func stylizeDetailsLabel() {
         self.detailsLabel.font = UIFont.systemFont(ofSize: 12)
-        self.detailsLabel.textColor = .gray
+        self.detailsLabel.textColor = .white
     }
     
     func setDetailsLabel(content: String) {
