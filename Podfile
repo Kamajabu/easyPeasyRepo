@@ -17,7 +17,7 @@ target 'uiTestApp' do
   end
 
   target 'uiTestAppUITests' do
-    inherit! :search_paths
+    inherit! :complete
 
     # Pods for testing
   pod 'SBTUITestTunnel/Client'
