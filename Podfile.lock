@@ -3,28 +3,26 @@ PODS:
   - GCDWebServer (3.4.2):
     - GCDWebServer/Core (= 3.4.2)
   - GCDWebServer/Core (3.4.2)
-  - Realm (3.1.1):
-    - Realm/Headers (= 3.1.1)
-  - Realm/Headers (3.1.1)
-  - RealmSwift (3.1.1):
-    - Realm (= 3.1.1)
   - SBTUITestTunnel/Client (2.3.0)
   - SBTUITestTunnel/Server (2.3.0):
     - GCDWebServer (~> 3.0)
 
 DEPENDENCIES:
   - EasyPeasy (= 1.5.1)
-  - RealmSwift
   - SBTUITestTunnel/Client
   - SBTUITestTunnel/Server
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - EasyPeasy
+    - GCDWebServer
+    - SBTUITestTunnel
 
 SPEC CHECKSUMS:
   EasyPeasy: 3bf792794f82b65290bcb70bccee1a68852f7517
   GCDWebServer: 8d67ee9f634b4bb91eb4b8aee440318a5fc6debd
-  Realm: 42d1c38a5b1bbcc828b48a7ce702cb86fc68adf4
-  RealmSwift: d31937ca6a6ee54acde64ec839523c0a3c04924b
   SBTUITestTunnel: 90f09ca722124754dda274f4128572c502f6d013
 
-PODFILE CHECKSUM: c7138d8e5a549dd0a79f5e6535f2d237dfe561d2
+PODFILE CHECKSUM: 953ad5eae8963bbac9cf5bc4d90d11cbda6df483
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.7.5
